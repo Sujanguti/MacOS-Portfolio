@@ -1,42 +1,56 @@
-import useWindowStore from "#store/window";
-import WindowControls from "./WindowControls";
-import { techStack } from "#constants/index.js";
+import WindowWrapper from "#hoc/WindowWrapper";
+import { techStack } from "#constants/index.js"
+import { Check, Flag } from "lucide-react";
+import { WindowControls } from "#components";
 
 const Terminal = () => {
-    const windows = useWindowStore((state) => state.windows);
+  return (<>
+  <div id = "window-header">
+  <WindowControls target = "terminal"/>
+  <h2>Tech Stack</h2>
+  </div>
 
-    return (
-        <div id="terminal" style={{ zIndex: windows.terminal.zIndex }}>
-            <div id="window-header">
-                <WindowControls windowKey="terminal" />
-                <h2>Skills</h2>
-            </div>
+  <div className = "techstack">
+    <p>
+        <span className="font-bold">@sujan % </span>
+        show tech stack
+    </p>
 
-            <div className="techstack">
-                {techStack.map((stack, index) => (
-                    <div key={index}>
-                        <div className="label">
-                            <h3>{stack.category}</h3>
-                        </div>
-                        <div className="content">
-                            <ul>
-                                {stack.items.map((item, i) => (
-                                    <li key={i}>
-                                        <span className="check">&#10003;</span>
-                                        <h3>{item}</h3>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    </div>
-                ))}
+    <div className = "label">
+        <p className = "w-32">Category</p>
+        <p>Technologies</p>
+    </div>
 
-                <div className="footnote">
-                    <p>&#9650; Always learning, always growing</p>
+    <ul className="content">
+        {techStack.map(({category, items}) =>(
+            <li key={category} className="flex items-center">
+                <Check className="check" size={20}/>
+                <h3>{category}</h3>
+                <ul>
+                    {items.map((item,i) =>(
+                        <li key={i}>{item}
+                        {i < items.length -1 ? "," : ""}</li>
+                    ))}
+                </ul>
+                
+            </li>
+        ))}
+    </ul>
+    <div className="footnote">
+        <p>
+            <Check size={20}/> 5 of 5 stacks loaded successfully (100%)
+        </p>
+        <p className="text-black">
+            <Flag size={15} fill="black" />
+            Render time: 6ms
+
+
+        </p>
                 </div>
-            </div>
-        </div>
-    );
+  </div>
+  </>
+  );
 };
 
-export default Terminal;
+const TerminalWindow = WindowWrapper(Terminal, 'terminal')
+export default TerminalWindow;
