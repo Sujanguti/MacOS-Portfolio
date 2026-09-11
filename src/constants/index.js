@@ -294,15 +294,7 @@ const WORK_LOCATION = {
             "It's built with Next.js and Tailwind, so it runs fast, looks professional, and works seamlessly on any device.",
           ],
         },
-        {
-          id: 2,
-          name: "ai-resume-analyzer.com",
-          icon: "/images/safari.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://youtu.be/iYOz165wGkQ?si=R1hs8Legl200m0Cl",
-          position: "top-20 left-20",
-        },
+        
         {
           id: 4,
           name: "ai-resume-analyzer.png",
@@ -312,15 +304,7 @@ const WORK_LOCATION = {
           position: "top-52 left-80",
           imageUrl: "/images/project-2.png",
         },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 left-5",
-        },
+        
       ],
     },
 
