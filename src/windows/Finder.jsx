@@ -38,6 +38,8 @@ const Finder = () => {
     </ul>
 </div>
 );
+  const isWorkView = activeLocation?.type === "work";
+
   return (
     <>
     <div id="window-header">
@@ -46,16 +48,16 @@ const Finder = () => {
     </div>
 
     <div className="bg-white flex h-full">
-        <div className="sidebar">           
-                {renderList('Favourites', Object.values(locations))}              
+        <div className="sidebar">
+                {renderList('Favourites', Object.values(locations))}
                 {renderList('Work', locations.work.children)}
         </div>
 
-        <ul className="content">
+        <ul className={clsx("content", isWorkView && "grid-view")}>
         {activeLocation?.children.map((item) =>(
-            <li 
-                key={item.id} 
-                className={item.position} 
+            <li
+                key={item.id}
+                className={isWorkView ? "grid-item" : item.position}
                 onClick={() =>openItem(item)}
             >
                 <img src={item.icon} alt={item.name}/>
@@ -64,7 +66,7 @@ const Finder = () => {
         ))}
     </ul>
     </div>
- 
+
     </>
   );
 };

@@ -102,23 +102,27 @@ const blogPosts = [
 const techStack = [
   {
     category: "Frontend",
-    items: ["HTML","CSS","JavaScript","TypeScript"],
+    items: ["HTML", "CSS", "JavaScript", "TypeScript", "React"],
   },
   {
     category: "Mobile",
     items: ["React Native", "Expo"],
   },
   {
-    category: "Styling",
-    items: ["Tailwind CSS", "CSS"],
-  },
-  {
     category: "Backend",
-    items: ["Node.js", "FASTAPI","FIREBASE"],
+    items: ["Node.js", "FastAPI", "Firebase"],
   },
   {
     category: "Database",
-    items: ["PostgreSQL"],
+    items: ["PostgreSQL", "SQL"],
+  },
+  {
+    category: "Testing",
+    items: ["Vitest", "TDD", "Unit Testing", "Manual Testing"],
+  },
+  {
+    category: "API",
+    items: ["REST APIs", "JSON", "Postman"],
   },
   {
     category: "Dev Tools",
@@ -188,19 +192,19 @@ const photosLinks = [
 const gallery = [
   {
     id: 1,
-    img: "/images/gal1.png",
+    img: "/images/sujan.png",
   },
   {
     id: 2,
-    img: "/images/gal2.png",
+    img: "/images/diu.png",
   },
   {
     id: 3,
-    img: "/images/gal3.png",
+    img: "/images/durga.png",
   },
   {
     id: 4,
-    img: "/images/gal4.png",
+    img: "/images/beach.png",
   },
 ];
 
@@ -224,56 +228,48 @@ const WORK_LOCATION = {
   children: [
     // ▶ Project 1
     {
-      id: 5,
-      name: "Nike Ecommerce Website Application",
-      icon: "/images/folder.png",
-      kind: "folder",
-      position: "top-10 left-5", // icon position inside Finder
-      windowPosition: "top-[5vh] left-5", // optional: Finder window position
-      children: [
-        {
-          id: 1,
-          name: "Nike Project.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 left-10",
-          description: [
-            "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
-            "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
-            "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
-            "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
-          ],
-        },
-        {
-          id: 2,
-          name: "nike.com",
-          icon: "/images/safari.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://youtu.be/fZdTYswuZjU?si=Awjl-pIst9e09_UU",
-          position: "top-10 right-20",
-        },
-        {
-          id: 4,
-          name: "nike.png",
-          icon: "/images/image.png",
-          kind: "file",
-          fileType: "img",
-          position: "top-52 right-80",
-          imageUrl: "/images/project-1.png",
-        },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 right-20",
-        },
-      ],
-    },
+    id: 5,
+    name: "Aurum Gold & Silver Application",
+    icon: "/images/folder.png",
+    kind: "folder",
+    position: "top-54 left-5",
+    windowPosition: "top-[10vh] left-10",
+    children: [
+      {
+        id: 1,
+        name: "Aurum App.txt",
+        icon: "/images/txt.png",
+        kind: "file",
+        fileType: "txt",
+        position: "top-5 left-10",
+        description: [
+          "Aurum is a mobile gold and silver trading application designed to provide a seamless experience for buying and managing precious metals.",
+          "The application supports separate customer and merchant experiences, allowing users to browse available products, view pricing, and interact with the platform through dedicated user flows.",
+          "Built with React Native and Expo, the application uses a modern full-stack architecture with API integration, database services, and reusable components for a scalable and responsive experience.",
+          "The project follows Test-Driven Development (TDD), using Vitest to write and maintain automated tests for application logic and validate expected behavior throughout development.",
+        ],
+      },
+      
+      {
+        id: 2,
+        name: "aurum.png",
+        icon: "/images/image.png",
+        kind: "file",
+        fileType: "img",
+        position: "top-52 right-80",
+        imageUrl: "/images/aurum.png",
+      },
+      {
+        id: 3,
+        name: "GitHub",
+        icon: "/images/github2.png",
+        kind: "file",
+        fileType: "url",
+        href: "https://github.com/Sujanguti/gold-silverBUy",
+        position: "top-60 right-20",
+      },
+    ],
+  },
 
     // ▶ Project 2
     {
@@ -330,55 +326,46 @@ const WORK_LOCATION = {
 
     // ▶ Project 3
     {
-      id: 7,
-      name: "Food Delivery App",
-      icon: "/images/folder.png",
-      kind: "folder",
-      position: "top-10 left-80",
-      windowPosition: "top-[33vh] left-7",
-      children: [
-        {
-          id: 1,
-          name: "Food Delivery App Project.txt",
-          icon: "/images/txt.png",
-          kind: "file",
-          fileType: "txt",
-          position: "top-5 left-10",
-          description: [
-            "Our Food Delivery App is a fast and convenient way to order meals from your favorite restaurants.",
-            "Instead of making calls or waiting in line, you can browse menus, customize orders, and track deliveries in real time.",
-            "Think of it like having your favorite restaurants in your pocket—ready to deliver anytime, anywhere.",
-            "It’s built with React Native, so it works smoothly on both iOS and Android with a clean, modern design.",
-          ],
-        },
-        {
-          id: 2,
-          name: "food-delivery-app.com",
-          icon: "/images/safari.png",
-          kind: "file",
-          fileType: "url",
-          href: "https://youtu.be/LKrX390fJMw?si=cExkuVhf2DTV9G2-",
-          position: "top-10 right-20",
-        },
-        {
-          id: 4,
-          name: "food-delivery-app.png",
-          icon: "/images/image.png",
-          kind: "file",
-          fileType: "img",
-          position: "top-52 right-80",
-          imageUrl: "/images/project-3.png",
-        },
-        {
-          id: 5,
-          name: "Design.fig",
-          icon: "/images/plain.png",
-          kind: "file",
-          fileType: "fig",
-          href: "https://google.com",
-          position: "top-60 right-20",
-        },
-      ],
+    id: 7,
+    name: "Grocify Grocery Application",
+    icon: "/images/folder.png",
+    kind: "folder",
+    position: "top-32 left-5",
+    windowPosition: "top-[8vh] left-5",
+    children: [
+      {
+        id: 1,
+        name: "Grocify App.txt",
+        icon: "/images/txt.png",
+        kind: "file",
+        fileType: "txt",
+        position: "top-5 left-10",
+        description: [
+          "Grocify is a modern grocery delivery application designed to make everyday grocery shopping simple and convenient.",
+          "The application allows users to browse grocery products, view product details, manage their cart, and place orders through a smooth and responsive interface.",
+          "The project focuses on providing a practical shopping experience with clear navigation, reusable components, and reliable application flows.",
+          "Built using React and JavaScript, with backend and API integration to handle application data and user interactions.",
+        ],
+      },
+      {
+        id: 2,
+        name: "GitHub",
+        icon: "/images/github2.png",
+        kind: "file",
+        fileType: "url",
+        href: "https://github.com/Sujanguti/Grocify-test",
+        position: "top-10 right-20",
+      },
+      {
+        id: 3,
+        name: "grocify.png",
+        icon: "/images/image.png",
+        kind: "file",
+        fileType: "img",
+        position: "top-52 right-80",
+        imageUrl: "/images/grocify.png",
+      },
+    ],
     },
   ],
 };
@@ -493,14 +480,14 @@ export const locations = {
 const INITIAL_Z_INDEX = 1000;
 
 const WINDOW_CONFIG = {
-  finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
-  imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+  finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, width: null, height: null },
+  contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, width: null, height: null },
+  resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, width: null, height: null },
+  safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, width: null, height: null },
+  photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, width: null, height: null },
+  terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, width: null, height: null },
+  txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, width: null, height: null },
+  imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, width: null, height: null },
 };
 
 export { INITIAL_Z_INDEX, WINDOW_CONFIG };
